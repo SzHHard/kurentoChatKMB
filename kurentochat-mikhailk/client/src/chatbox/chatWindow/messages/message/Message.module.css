@@ -1,0 +1,30 @@
+.messageContainer {
+    margin-top: 15px;
+    width: 85%;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.messageContainer .sender {
+    width: 95%;
+    height: 27px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgb(176, 145, 233);
+
+}
+
+.messageContainer .message {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-top: 1px solid rgb(176, 145, 233);;
+    text-align: start;
+    white-space: pre-wrap;
+}

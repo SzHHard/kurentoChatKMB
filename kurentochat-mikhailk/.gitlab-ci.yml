@@ -1,0 +1,13 @@
+stages:
+  - update 
+
+update: 
+  stage: update
+  image: registry.s2.git.fora-soft.com/forasoft/dind 
+  tags:
+    - kmb-deploy 
+  script:
+    - docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY} 
+    - docker-compose --compatibility -p kurentochat-mikhailkor -f docker-compose.yml up -d --force-recreate --build 
+  only: 
+    - main 

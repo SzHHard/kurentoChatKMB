@@ -1,0 +1,11 @@
+.chatWindow {
+    background-color: aliceblue;
+    width: 100%;
+    /* min-height: 300px; */
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}

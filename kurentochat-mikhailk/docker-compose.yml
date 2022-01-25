@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  #Описываем используемые контейнеры
+
+  kms:
+    image: kurento/kurento-media-server:latest
+    environment:
+      - KMS_MIN_PORT=50700
+      - KMS_MAX_PORT=50800
+    ports:
+      - 50700-50800:50700-50800/tcp
+      - 50700-50800:50700-50800/udp
+  server:
+    #Контейнер бэкенда
+    build: server #указываем путь к сервису (если у вас каталог с бэкендом называется иначе - нужно поменять)
+    restart: always
+    depends_on:
+      - kms
+    environment:
+      #тут передаем переменные среды
+      - PORT=3001
+      - ORIGIN=kurentochat-mikhailkor.staging.forasoft.com
+      - KURENTO_URL=ws://kms:8888/kurento
+    ports:
+      - "3001:3001"
+  client:
+    build: client
+    restart: always
+    depends_on:
+      - server
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=https://kurentochat-mikhailkor.staging.forasoft.com
+    ports:
+      - "3000:3000"

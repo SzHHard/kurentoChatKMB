@@ -1,0 +1,17 @@
+
+.videoElement video {
+    width: 95%;
+    margin-top: 10%;
+}
+.videoElement.myVideo {
+    border: 1px solid rgb(213, 232, 248);
+    border-radius: 10px;
+}
+
+.videoElement.myVideo img {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,18 @@
+.NewMessageBar textarea {
+    height: 30px;
+    width: 60%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+}
+.NewMessageBar button {
+    height: 30px;
+}
+
+.NewMessageBar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}

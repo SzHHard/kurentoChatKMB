@@ -1,0 +1,5 @@
+version: '3'
+services:
+  kurento:
+    image: kurento/kurento-media-server:6.16
+    network_mode: 'host'

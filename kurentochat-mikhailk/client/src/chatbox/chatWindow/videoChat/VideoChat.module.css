@@ -1,0 +1,9 @@
+.videoArea {
+    width: 55%; 
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}

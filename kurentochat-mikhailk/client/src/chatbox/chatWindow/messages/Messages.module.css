@@ -1,0 +1,12 @@
+.messages {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40%;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border-left: 1px solid sandybrown;
+    border-radius: 5px;
+    overflow: auto;
+}
